@@ -1,0 +1,14 @@
+steps:
+  - name: ocrit.docling.DoclingExtract
+
+  - name: ocrit.docling.DoclingParse
+    config:
+      schema_name: ocrit.schemas.business.BusinessReceiptTemplate
+
+  - name: ocrit.evaluate.Evaluate
+    config:
+      schema_name: ocrit.schemas.business.BusinessReceiptTemplate
+
+  - name: ocrit.debug.WriteDocument
+    config:
+        path: data/docling

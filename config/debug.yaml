@@ -1,0 +1,20 @@
+steps:
+  - name: ocrit.doctr.DocTRExtract
+    config:
+      det_arch: db_resnet50
+      reco_arch: crnn_vgg16_bn
+      pretrained: true
+
+  - name: ocrit.doctr.DocTRParse
+    config:
+      template: fixtures/templates/Business-Receipt-Template.pdf
+      schema: ocrit.schemas.business.BusinessReceiptTemplate
+
+  - name: ocrit.io.WriteJSON
+    config:
+      attribute: extracted
+      path: data/output.txt
+
+  - name: ocrit.evaluation.Evaluate
+    config:
+      schema: ocrit.schemas.business.BusinessReceiptTemplate

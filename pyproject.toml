@@ -1,0 +1,30 @@
+[project]
+name = "ocr-examples"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "addict>=2.4.0",
+    "camel-converter>=5.1.0",
+    "docling>=2.86.0",
+    "einops>=0.8.2",
+    "faker-food>=0.3.0",
+    "jsondiff>=2.2.1",
+    "openai>=2.45.0",
+    "pdf2image>=1.17.0",
+    "pillow>=12.2.0",
+    "pydantic>=2.12.5",
+    "pymupdf>=1.27.2.3",
+    "pypdf>=6.13.3",
+    "python-doctr>=1.0.1",
+    "rfdetr>=1.6.4",
+    "sentencepiece>=0.2.1",
+    "transformers>=5.5.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "pytest>=9.1.1",
+]
